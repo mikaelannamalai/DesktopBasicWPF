@@ -1,0 +1,19 @@
+﻿<Application x:Class="AppDev.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AppDev"
+             xmlns:views="clr-namespace:AppDev.Views"
+             xmlns:viewmodels="clr-namespace:AppDev.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <DataTemplate DataType="{x:Type viewmodels:EmployeeViewModel}">
+            <views:EmployeeView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:TodosViewModel}">
+            <views:Todos/>
+
+        </DataTemplate>              
+        
+    </Application.Resources>
+</Application>
